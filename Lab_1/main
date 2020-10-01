@@ -1,0 +1,4 @@
+#!/bin/bash
+
+case "$1"
+echo "123"
