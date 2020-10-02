@@ -1,4 +1,57 @@
 #!/bin/bash
 
-case "$1"
-echo "123"
+case "$1" in
+calc)
+        if [$# -eq 4]
+        then ./calc.sh $2 $3 $4
+        else echo "3 arguments required"
+        fi
+;;
+search)
+        if [$# -eq 3]
+        then ./search.sh $2 $3
+        else echo "2 arguments required"
+        fi
+;;
+revers)
+        if [$# -eq 3]
+        then ./revers $2 $3
+        else echo "2 arguments required"
+        fi
+;;
+strlen)
+        if [$# -eq 2]
+        then ./strlen
+        else echo "1 arguments required"
+        fi
+;;
+log)
+        if [$# -eq 1]
+        then ./log
+        else echo "You want too much"
+        fi
+;;
+exit)
+        if [$# -eq 2]
+        then ./ex.sh $2
+        fi
+        if [$# -eq 1]
+        then exit 0
+        fi
+        if [$# -ge 3]
+        then echo "1 argument required"
+        fi
+;;
+help)
+        if [$# -eq 1]
+        then ./help.sh
+        else echo "You want too much"
+        fi
+;;
+interactive)
+        if [$# -eq 1] 
+        then ./interactive
+        else echo "You want too much"
+        fi
+;;
+esac
