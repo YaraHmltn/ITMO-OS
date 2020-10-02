@@ -8,6 +8,10 @@ if [[ "$1" -eq "div" && ("$3" -eq "0" ]] || [["$3" -eq "-0" ]] || [["$3" -eq "+0
 then echo "Cannot div by zero"
 exit 3
 fi
+if ! [[ $2 =~ ^[-]?[0-9]+$ ]] || ! [[ $3 =~ ^[-]?[0-9]+$ ]]
+then echo "Not an integer entered"
+exit 4
+fi
 calc ()
 {
     case $1 in
