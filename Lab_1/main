@@ -2,28 +2,28 @@
 
 case "$1" in
 calc)
-        if [$# -eq 4]
+        if [[ $# -eq 4 ]]
         then ./calc.sh $2 $3 $4
         else echo "3 arguments required"
         exit 1
         fi
 ;;
 search)
-        if [$# -eq 3]
+        if [[ $# -eq 3 ]]
         then ./search.sh $2 $3
         else echo "2 arguments required"
         exit 1
         fi
 ;;
 revers)
-        if [$# -eq 3]
+        if [[ $# -eq 3 ]]
         then ./revers $2 $3
-        else echo "2 arguments required" 
+        else echo "2 arguments required"
         exit 1
         fi
 ;;
 strlen)
-        if [$# -eq 2]
+        if [[ $# -eq 2 ]]
         then ./strlen
         else echo "1 arguments required"
         exit 1
@@ -37,26 +37,26 @@ log)
         fi
 ;;
 exit)
-        if [$# -eq 2]
+        if [[ $# -eq 2 ]]
         then ./ex.sh $2
         fi
-        if [$# -eq 1]
+        if [[ $# -eq 1 ]]
         then exit 0
         fi
-        if [$# -ge 3]
+        if [[ $# -ge 3 ]]
         then echo "1 argument required"
         exit 1
         fi
 ;;
 help)
-        if [$# -eq 1]
+        if [[ $# -eq 1 ]]
         then ./help.sh
         else echo "You want too much"
         exit 1
         fi
 ;;
 interactive)
-        if [$# -eq 1] 
+        if [[ $# -eq 1 ]]
         then ./interactive
         else echo "You want too much"
         exit 1
