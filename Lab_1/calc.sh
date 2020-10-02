@@ -1,5 +1,7 @@
 #!/bin/bash
 
+calc ()
+{
 if [[ "$1" -ne "sum" ]] && [[ "$1" -ne "sub" ]] && [[ "$1" -ne "mul" ]] && [["$1" -ne "div"]]
 then echo "First argument is invalid"
 exit 2
@@ -12,12 +14,10 @@ if ! [[ $2 =~ ^[-]?[0-9]+$ ]] || ! [[ $3 =~ ^[-]?[0-9]+$ ]]
 then echo "Not an integer entered"
 exit 4
 fi
-calc ()
-{
-    case $1 in
-        sum) echo $(($2+$3));;
-        sub) echo $(($2-$3));;
-        mul) echo $(($2*$3));;
-        div) echo $(($2/$3));;
-    esac
+case $1 in
+    sum) echo $(($2+$3));;
+    sub) echo $(($2-$3));;
+    mul) echo $(($2*$3));;
+    div) echo $(($2/$3));;
+esac
 }
