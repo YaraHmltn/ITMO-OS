@@ -30,7 +30,7 @@ search)
 
 revers)
         if [[ $# -eq 3 ]]
-        then ./revers $2 $3
+        then ./revers.sh $2 $3
         else echo "2 arguments required"
         exit 1
         fi
@@ -39,7 +39,7 @@ revers)
 
 strlen)
         if [[ $# -eq 2 ]]
-        then ./strlen
+        then ./strlen.sh
         else echo "1 arguments required"
         exit 1
         fi
@@ -48,7 +48,7 @@ strlen)
 
 log)
         if [$# -eq 1]
-        then ./log
+        then ./log.sh
         else echo "You want too much"
         exit 1
         fi
@@ -84,7 +84,7 @@ help)
 
 interactive)
         if [[ $# -eq 1 ]]
-        then ./interactive
+        then ./interactive.sh
         else echo "You want too much"
         exit 1
         fi
