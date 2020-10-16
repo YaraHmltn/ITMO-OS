@@ -36,11 +36,24 @@ case "$letter" in
         source ./reverse.sh $input $output
         interactive
     ;;
-    d | log)
+    d | strlen)
+        echo "Enter the string in \" \""
+        read str
+        if [[ "$str" = \"* ]] 
+        then
+            if [[ "$str" = *\" ]]
+            then sourse ./strlen.sh $str
+            else echo "Incorrect data"
+            fi
+        else echo "Incorrect data"
+        fi
+        interactive
+    ;;
+    e | log)
         ./log.sh
         interactive
     ;;
-    e | help)
+    g | help)
         cat help.txt
         interactive
     ;;
@@ -48,9 +61,9 @@ case "$letter" in
         echo "Enter return code"
         read code
         if [[ -z $code ]]
-        thren exit 0
+        then exit 0
         fi
-        if ! [[ $code =~ ^[+-]?[0-9] ]]
+        if ! [[ "$code" =~ ^[+-]?[0-9] ]]
         then echo "Not a number enter"
         else exit $code
         fi
