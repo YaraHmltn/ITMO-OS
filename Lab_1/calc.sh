@@ -6,7 +6,7 @@ if [[ "$1" -ne "sum" ]] && [[ "$1" -ne "sub" ]] && [[ "$1" -ne "mul" ]] && [["$1
 then echo "First argument is invalid"
 exit 2
 fi
-if [[ "$1" -eq "div" && ([[ "$3" -eq "0" ]] || [[ "$3" -eq "-0" ]] || [[ "$3" -eq "+0" ]])
+if [[ "$1" -eq "div" ]] && ( [[ "$3" -eq "0" ]] || [[ "$3" -eq "-0" ]] || [[ "$3" -eq "+0" ]] )
 then echo "Cannot div by zero"
 exit 3
 fi
