@@ -1,4 +1,4 @@
 #!/bin/bash
 
-    str = "$2"
+    str = "$1"
     echo "${#str}"

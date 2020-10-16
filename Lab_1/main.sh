@@ -8,7 +8,7 @@ fi
 case "$1" in
 calc)
         if [[ $# -eq 4 ]]
-        then ./calc.sh $2 $3 $4
+        then source ./calc.sh $2 $3 $4
         else echo "3 arguments required"
         exit 1
         fi
@@ -21,16 +21,16 @@ search)
         exit 2
         fi
         if [[ $# -eq 3 ]]
-        then ./search.sh $2 $3
+        then source ./search.sh $2 $3
         else echo "2 arguments required"
         exit 1
         fi
 
 ;;
 
-revers)
+reverse)
         if [[ $# -eq 3 ]]
-        then ./revers.sh $2 $3
+        then ./reverse.sh $2 $3
         else echo "2 arguments required"
         exit 1
         fi
@@ -39,7 +39,7 @@ revers)
 
 strlen)
         if [[ $# -eq 2 ]]
-        then ./strlen.sh
+        then source ./strlen.sh
         else echo "1 arguments required"
         exit 1
         fi
@@ -84,7 +84,7 @@ help)
 
 interactive)
         if [[ $# -eq 1 ]]
-        then ./interactive.sh
+        then source ./interactive.sh
         else echo "You want too much"
         exit 1
         fi

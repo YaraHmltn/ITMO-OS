@@ -17,7 +17,7 @@ case "$letter" in
         read first
         echo "Enter the second argument"
         read second
-        ./calc.sh $func $first $second
+        source ./calc.sh $func $first $second
         interactive
     ;;
     b | search)
@@ -25,7 +25,7 @@ case "$letter" in
         read name
         echo "Enter key"
         read key
-        ./search.sh $name $key
+        source ./search.sh $name $key
         interactive
     ;;
     c | reverse)
@@ -33,7 +33,7 @@ case "$letter" in
         read input
         echo "Enter second file name"
         read output
-        ./reverse.sh $input $output
+        source ./reverse.sh $input $output
         interactive
     ;;
     d | log)
