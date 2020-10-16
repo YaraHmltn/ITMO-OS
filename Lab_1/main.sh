@@ -75,7 +75,7 @@ exit)
 
 help)
         if [[ $# -eq 1 ]]
-        then ./help.sh
+        then cat help.txt
         else echo "You want too much"
         exit 1
         fi
