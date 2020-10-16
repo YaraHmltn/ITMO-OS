@@ -1,7 +1,5 @@
 #!/bin/bash
 
-interactive ()
-{
 echo -e "I'm very tired, just choose a letter"
 echo -e "a. calc"
 echo -e "b. search"
@@ -51,4 +49,3 @@ case "$letter" in
         exit 0
     ;;
 esac
-}
