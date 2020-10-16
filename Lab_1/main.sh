@@ -47,7 +47,7 @@ strlen)
 ;;
 
 log)
-        if [$# -eq 1]
+        if [ $# -eq 1 ]
         then ./log.sh
         else echo "You want too much"
         exit 1
