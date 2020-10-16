@@ -41,11 +41,19 @@ case "$letter" in
         interactive
     ;;
     e | help)
-        ./help.sh
+        cat help.txt
         interactive
     ;;
     f | exit)
+        echo "Enter return code"
+        read code
+        if [[ -z $code ]]
+        thren exit 0
+        fi
+        if ! [[ $code =~ ^[+-]?[0-9] ]]
+        then echo "Not a number enter"
+        else exit $code
+        fi
         interactive
-        exit 0
     ;;
 esac
