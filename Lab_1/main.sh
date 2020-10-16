@@ -57,9 +57,11 @@ log)
 
 exit)
         if [[ $# -eq 2 ]]
+        then
         if [[ $2 =~ ^[+-]?[0-9]+$ ]]
         then ./ex.sh $2
         else echo "arg is not int"
+        fi
         fi
         if [[ $# -eq 1 ]]
         then exit 0
