@@ -1,7 +1,6 @@
 #!/bin/bash
 
-if  [[ "$1" -ne "calc" ]] || [ "$1" -ne "search" ]] || [ "$1" -ne "revers" ]] || [ "$1" -ne "strlen" 
-|| [ "$1" -ne "log" ] || [ "$1" -ne "exit" ] || [ "$1" -ne "help" ] || [ "$1" -ne "interactive" ]
+if  [[ "$1" -ne "calc" ]] || [[ "$1" -ne "search" ]] || [[ "$1" -ne "revers" ]] || [[ "$1" -ne "strlen" ] || [[ "$1" -ne "log" ]] || [[ "$1" -ne "exit" ]] || [[ "$1" -ne "help" ]] || [[ "$1" -ne "interactive" ]]
 then echo "There is no such function"
 exit 2
 fi
@@ -46,6 +45,7 @@ log)
         exit
         fi
 ;;
+
 exit)
         if [[ $# -eq 2 ]]
         if [[ $2 =~ ^[+-]?[0-9]+$ ]]
