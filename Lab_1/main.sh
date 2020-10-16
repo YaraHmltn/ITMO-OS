@@ -12,7 +12,9 @@ calc)
         else echo "3 arguments required"
         exit 1
         fi
+
 ;;
+
 search)
         if ! [ -r "$2" ]
         then echo "No access"
@@ -23,27 +25,34 @@ search)
         else echo "2 arguments required"
         exit 1
         fi
+
 ;;
+
 revers)
         if [[ $# -eq 3 ]]
         then ./revers $2 $3
         else echo "2 arguments required"
         exit 1
         fi
+
 ;;
+
 strlen)
         if [[ $# -eq 2 ]]
         then ./strlen
         else echo "1 arguments required"
         exit 1
         fi
+
 ;;
+
 log)
         if [$# -eq 1]
         then ./log
         else echo "You want too much"
-        exit
+        exit 1
         fi
+
 ;;
 
 exit)
@@ -59,19 +68,25 @@ exit)
         then echo "1 argument required"
         exit 1
         fi
+
 ;;
+
 help)
         if [[ $# -eq 1 ]]
         then ./help.sh
         else echo "You want too much"
         exit 1
         fi
+
 ;;
+
 interactive)
         if [[ $# -eq 1 ]]
         then ./interactive
         else echo "You want too much"
         exit 1
         fi
+
 ;;
+
 esac
