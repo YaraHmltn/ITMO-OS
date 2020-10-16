@@ -17,7 +17,8 @@ calc)
 search)
         if ! [ -r "$2" ]
         then echo "No access"
-        fi 
+        exit 2
+        fi
         if [[ $# -eq 3 ]]
         then ./search.sh $2 $3
         else echo "2 arguments required"
